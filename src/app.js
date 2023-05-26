@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const applicationServerKey =
-    'BMBlr6YznhYMX3NgcWIDRxZXs0sh7tCv7_YCsWcww0ZCv9WGg-tRCXfMEHTiBPCksSqeve1twlbmVAZFv7GSuj0';
+    'BNW6jroXHfN_JWJzagOi9o1vgGWQMVkAGTTddfbSfdzvqJIWyyIsRyefGrmp4qC7cwKIkZwY9Gb8g-u_ft28YHk';
   let isPushEnabled = false;
 
   const pushButton = document.querySelector('#push-subscription-button');

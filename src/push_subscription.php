@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
 $subscription = json_decode(file_get_contents('php://input'), true);
 
 if (!isset($subscription['endpoint'])) {

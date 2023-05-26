@@ -8,6 +8,8 @@ use Minishlink\WebPush\Subscription;
 // because you already stored it (cf. push_subscription.php)
 $subscription = Subscription::create(json_decode(file_get_contents('php://input'), true));
 
+var_dump(VAPID::createVapidKeys());
+
 $auth = array(
     'VAPID' => array(
         'subject' => 'https://github.com/Minishlink/web-push-php-example/',

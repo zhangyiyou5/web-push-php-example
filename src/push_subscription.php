@@ -11,13 +11,6 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 var_dump($subscription);
 
-//解码
-$base64String = $subscription['publicKey'];
-$binaryString = base64_decode($base64String);
-$publicKey = unpack('C*', $binaryString);
-$publicKeyString = implode('', array_map('chr', $publicKey));
-
-echo "publicKey : {$publicKeyString}";
 
 switch ($method) {
     case 'POST':

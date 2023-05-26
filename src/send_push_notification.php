@@ -21,11 +21,11 @@ $webPush = new WebPush($auth);
 
 
 //参数从数据库获取
-$subscription = [
-    'endpoint' => 'https://wns2-sg2p.notify.windows.com/w/?token=BQYAAABfnVLh93DC2ia5KqE9lX9mU1Chq4Pd%2fjIn1yx2Kc1oYEG67mthZrGT9kTNZr4v5etgZ5bh6Gue2HSJ176Pez%2b3byPI6ElTiwdF%2b6MJrZyCYX5LIWqp%2fHxzrZaswBmn20EkQyVYXs84trDuqOuCx%2bKj3g6n5IeNV%2fGKwO%2f0RgBKEZWqG3uprtfKoE8SuljpN2dDkjaul87ubT6PRogN8aOlALt8Xg2DSS10HBoFljfL3Ha6SY%2b%2bSmgBjKNwovsRaKrNOZkMja9nQhlccPBlfZhrezI1eqKf6jdkMv6TvJ3ij3l7UzCWugfJ1lNSmP2%2f4LLniqs1qGMTkQ5AhVP46Me%2f',
-    'authToken' => 'yGqLq9dHidGNzM4ugQx2yw==',
-    'publicKey' => 'BBqxZcA4p4lznAR7KG0J207rVdupSvb3eXpum+ns4zevFAMr9GaITuyFq4YIqo+oe6jgiionVRfQ0LYd9NdjlMo=',
-];
+$subscription = Subscription::create([
+    'endpoint' => 'https://wns2-sg2p.notify.windows.com/w/?token=BQYAAABfnVLh93DC2ia5KqE9lX9mU1Chq4Pd%2fjIn1yx2Kc1oYEG67mthZrGT9kTNZr4v5etgZ5bh6Gue2HSJ176Pez%2b3byPI6ElTiwdF%2b6MJrZyCYX5LIWqp%2fHxzrZaswBmn20EkQyVYXs84trDuqOuCx%2bKj3g6n5IeNV%2fGKwO%2f0RgBKEZWqG3uprtfKoE8SuljpN2dDkjaul87ubT6PRogN8aOlALt8Xg2DSS10HBoFljfL3Ha6SY%2b%2bSmgBjKNwovsRaKrNOZkMja9nQhlccPBlfZhrezI1eqKf6jdkMv6TvJ3ij3l7UzCWugfJ1lNSmP2%2f4LLniqs1qGMTkQ5AhVP46Me%2f', // Firefox 43+,
+    'publicKey' => 'BBqxZcA4p4lznAR7KG0J207rVdupSvb3eXpum+ns4zevFAMr9GaITuyFq4YIqo+oe6jgiionVRfQ0LYd9NdjlMo=', // base 64 encoded, should be 88 chars
+    'authToken' => 'yGqLq9dHidGNzM4ugQx2yw', // base 64 encoded, should be 24 chars
+]);
 
 
 $report = $webPush->sendOneNotification(

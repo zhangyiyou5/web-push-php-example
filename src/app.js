@@ -210,10 +210,8 @@ document.addEventListener('DOMContentLoaded', () => {
       method,
       body: JSON.stringify({
         endpoint: subscription.endpoint,
-        // publicKey: key ? btoa(String.fromCharCode.apply(null, new Uint8Array(key))) : null,
-        publicKey: key ? key : null,
-        // authToken: token ? btoa(String.fromCharCode.apply(null, new Uint8Array(token))) : null,
-        authToken: token ? token : null,
+        publicKey: key ? btoa(String.fromCharCode.apply(null, new Uint8Array(key))) : null,
+        authToken: token ? btoa(String.fromCharCode.apply(null, new Uint8Array(token))) : null,
         contentEncoding,
       }),
     }).then(() => subscription);

@@ -4,10 +4,6 @@ use Minishlink\WebPush\WebPush;
 use Minishlink\WebPush\Subscription;
 use Minishlink\WebPush\VAPID;
 
-// here I'll get the subscription endpoint in the POST parameters
-// but in reality, you'll get this information in your database
-// because you already stored it (cf. push_subscription.php)
-
 
 $subscription = Subscription::create(json_decode(file_get_contents('php://input'), true));
 
@@ -22,6 +18,16 @@ $auth = array(
 );
 
 $webPush = new WebPush($auth);
+
+
+//参数从数据库获取
+//$subscription = [
+//    'endpoint' => '需要发给谁，从数据库获取',
+//    'keys' => [
+//        'p256dh' => '从数据库获取',
+//        'auth' => '从数据库获取',
+//    ],
+//];
 
 $report = $webPush->sendOneNotification(
     $subscription,

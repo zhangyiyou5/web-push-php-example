@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(() => navigator.serviceWorker.ready)
       .then(serviceWorkerRegistration =>
         serviceWorkerRegistration.pushManager.subscribe({
-          userVisibleOnly: false,
+          userVisibleOnly: true,
           applicationServerKey: urlBase64ToUint8Array(applicationServerKey),
         })
       )

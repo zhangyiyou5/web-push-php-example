@@ -13,11 +13,8 @@ var_dump($subscription);
 //解码
 $base64String = $subscription['publicKey'];
 $binaryString = base64_decode($base64String);
-$publicKey = new \SplFixedArray(strlen($binaryString));
-for ($i = 0; $i < strlen($binaryString); $i++) {
-    $publicKey[$i] = ord($binaryString[$i]);
-}
-$publicKeyString = implode('', $publicKey);
+$publicKey = unpack('C*', $binaryString);
+$publicKeyString = implode('', array_map('chr', $publicKey));
 
 echo "publicKey : {$publicKeyString}";
 

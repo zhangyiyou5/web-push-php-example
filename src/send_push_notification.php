@@ -7,9 +7,11 @@ use Minishlink\WebPush\VAPID;
 // here I'll get the subscription endpoint in the POST parameters
 // but in reality, you'll get this information in your database
 // because you already stored it (cf. push_subscription.php)
+
+
 $subscription = Subscription::create(json_decode(file_get_contents('php://input'), true));
 
-//var_dump(VAPID::createVapidKeys());
+var_dump($subscription);
 
 $auth = array(
     'VAPID' => array(

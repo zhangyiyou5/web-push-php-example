@@ -14,6 +14,11 @@ switch ($method) {
         break;
     case 'PUT':
         // update the key and token of subscription corresponding to the endpoint
+        // 需要存储的字段如下
+        // 用户标识字段
+        // 订阅端点字段（endpoint）
+        // 公钥字段（publicKey）
+        // 授权令牌字段（authToken）
         break;
     case 'DELETE':
         // delete the subscription corresponding to the endpoint

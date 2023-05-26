@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   navigator.serviceWorker.register('serviceWorker.js').then(
     () => {
-      push_updateSubscription();
       console.log('[SW] Service worker has been registered');
+      push_updateSubscription();
     },
     e => {
       console.error('[SW] Service worker registration failed', e);

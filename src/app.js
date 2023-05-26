@@ -147,7 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
           console.error('Impossible to subscribe to push notifications', e);
           changePushButtonState('disabled');
         }
-        console.error(e)
       });
   }
 

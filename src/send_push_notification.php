@@ -16,6 +16,7 @@ $auth = array(
         'subject' => 'https://webpush.powerbuyin.top/',
         'publicKey' => file_get_contents(__DIR__ . '/../keys/public_key.txt'), // don't forget that your public key also lives in app.js
         'privateKey' => file_get_contents(__DIR__ . '/../keys/private_key.txt'), // in the real world, this would be in a secret file
+        'pemFile' => file_get_contents(__DIR__ . '/../keys/private_key.pem'),
     ),
 );
 
@@ -23,7 +24,7 @@ $webPush = new WebPush($auth);
 
 $report = $webPush->sendOneNotification(
     $subscription,
-    '{"msg":"Hello World!"}'
+    '{"title":"Hello World!","body":"body","icon":"icon"}'
 );
 
 // handle eventual errors here, and remove the subscription from your server if it is expired

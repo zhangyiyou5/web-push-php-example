@@ -2,6 +2,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 use Minishlink\WebPush\WebPush;
 use Minishlink\WebPush\Subscription;
+use Minishlink\WebPush\VAPID;
 
 // here I'll get the subscription endpoint in the POST parameters
 // but in reality, you'll get this information in your database

@@ -20,11 +20,11 @@ $auth = array(
 $webPush = new WebPush($auth);
 
 //参数从数据库获取
-//$subscription = Subscription::create([
-//    'endpoint' => 'https://wns2-sg2p.notify.windows.com/w/?token=BQYAAADxkCVKfKtZ1ln2PeXk6vDKp9nsejGN1C37PpCEy1hQFCxULzbQsX%2bSx9gvcDA7TW2TlzrHcmTKom49nChXcR22qXLDNO%2boJGNQ1G8Tk%2bd1ucVNZuyJ4%2f57EEW4ojZLtphGX%2bkkTehykOLtbGbMztg0kMXsKURGIzh4wfvP5s7Ct%2flC%2bs5zQeyqX79itYI%2fgstREmgqpGDk88majH%2fhTVQ3soeL%2fmE%2fha8X%2bCXwiyzlwunotrPc9Yu8vwLo6swzMunpxZjG9WQWdPyD1JSERsz%2bqdIbwJqEO6G3GQjLj3GJvyQ3ezCDPGiPv%2flXqNWb6iJA%2bHB3Z6a48XVbcJL5edyG', // Firefox 43+,
-//    'publicKey' => 'BMyfFYJa07bqpqPAKMoGusVGX+hOEu2bo2TW6mpkv5WARMF4Ey90RZy1MW+XuUoaXc0RwA3izg/PTdMiZGTtw1I=', // base 64 encoded, should be 88 chars
-//    'authToken' => 'UOH0QSWJIAwq8eT/b8LorA==', // base 64 encoded, should be 24 chars
-//]);
+$subscription = Subscription::create([
+    'endpoint' => 'https://fcm.googleapis.com/fcm/send/fWJWzP3soxk:APA91bFMYAEyc-_C4skiuvDpv0BS8jZaCDvAxvTHKlBaw_hDcJdSsyeQVR3RtQaLgWnIl4LdDDfKStFw8dP3Zd_Nbe5wlwIhaTFpDx7FKFtBoTMunQV1RzI5mMeVdSjcnXZ7Mp2VFOvY', // Firefox 43+,
+    'publicKey' => 'BAeq8zNfqnoJWF442FDOj0S6HzR7O4WUYmJN3sylL+Zw5G75jLU/IEE95xpgGacpHObDV9vcNItY3FKxSerw6Rc=', // base 64 encoded, should be 88 chars
+    'authToken' => '/e5WSLy9Mtcp/9RRrKJDnw==', // base 64 encoded, should be 24 chars
+]);
 
 //var_dump($subscription);
 

@@ -10,7 +10,7 @@ use Minishlink\WebPush\VAPID;
 
 $auth = array(
     'VAPID' => array(
-//        'subject' => 'https://powerbuyin.top/',
+        'subject' => 'https://baidu.top/',
         'publicKey' => file_get_contents(__DIR__ . '/../keys/public_key.txt'), // don't forget that your public key also lives in app.js
         'privateKey' => file_get_contents(__DIR__ . '/../keys/private_key.txt'), // in the real world, this would be in a secret file
     ),

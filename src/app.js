@@ -237,6 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
 
+        console.log(subscription);
         const contentEncoding = (PushManager.supportedContentEncodings || ['aesgcm'])[0];
         const jsonSubscription = subscription.toJSON();
         console.log(jsonSubscription);

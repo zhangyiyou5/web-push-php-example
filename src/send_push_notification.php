@@ -6,7 +6,6 @@ use Minishlink\WebPush\VAPID;
 
 
 $subscription = Subscription::create(json_decode(file_get_contents('php://input'), true));
-echo 1;
 var_dump($subscription);
 
 $auth = array(
@@ -18,6 +17,8 @@ $auth = array(
 );
 
 $webPush = new WebPush($auth);
+echo 2;
+
 
 //参数从数据库获取
 //$subscription = Subscription::create([

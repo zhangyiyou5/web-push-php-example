@@ -22,7 +22,7 @@ $webPush = new WebPush($auth);
 $subscription = Subscription::create([
     'endpoint' => 'https://fcm.googleapis.com/fcm/send/d06cWYtZLL0:APA91bH9EljjzSwKylSdwz4F5VPVw-JwHFB9KpP-pV9TD419tKlpr1lRx-ZoqqmqA3pYsen8YX7KE7Qxc_iT8_kehTO2GrJNqCNaVEl12IYh7euNAW9lvxv_-2maYrxJNUYXhXGduab7', // Firefox 43+,
     'publicKey' => 'BP+/KZygGBY11YEjZzY4uvNMfbG8KCzB+XiQLLLEaRmelJHqmEMd49l250M5+LVqI6zSmUaNqVVMrn7qs9b5JRY=', // base 64 encoded, should be 88 chars
-    'authToken' => 'weVd2PFvuwGhRgiNaFBarA==', // base 64 encoded, should be 24 chars
+    'authToken' => 'weVd2PFvuwGhRgiNaFBarA111==', // base 64 encoded, should be 24 chars
 ]);
 
 var_dump($subscription);

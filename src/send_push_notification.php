@@ -17,8 +17,6 @@ $auth = array(
 );
 
 $webPush = new WebPush($auth);
-echo 2;
-
 
 //参数从数据库获取
 //$subscription = Subscription::create([

@@ -6,7 +6,7 @@ use Minishlink\WebPush\VAPID;
 
 
 $subscription = Subscription::create(json_decode(file_get_contents('php://input'), true));
-
+echo 1;
 var_dump($subscription);
 
 $auth = array(

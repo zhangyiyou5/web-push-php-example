@@ -5,9 +5,9 @@ use Minishlink\WebPush\Subscription;
 use Minishlink\WebPush\VAPID;
 
 
-//$subscription = Subscription::create(json_decode(file_get_contents('php://input'), true));
-//
-//var_dump($subscription);
+$subscription = Subscription::create(json_decode(file_get_contents('php://input'), true));
+
+var_dump($subscription);
 
 $auth = array(
     'VAPID' => array(
@@ -20,13 +20,13 @@ $auth = array(
 $webPush = new WebPush($auth);
 
 //参数从数据库获取
-$subscription = Subscription::create([
-    'endpoint' => 'https://fcm.googleapis.com/fcm/send/d0TH_3q920U:APA91bEXaWgUZx7VV7SZKM4XUua_sTp9FrY6uhhPUgOoCiQ_zfyCP2IlhGcV0cODj06e5i0BP599Yb9m7gkxEYJCh9TPvqd5Wbv1Ad1qjdvwf4bf96FwgwRY5cb9s5eLjwnLERItMRs0', // Firefox 43+,
-    'publicKey' => 'BMBsQg3PP56yG6eqIAIf5rfrwKxGsRbwvy0fG1cUTyhvHWl+4QMI260FO72z4MkH8m+iV9oyK+O8x+bIWSGowl0=', // base 64 encoded, should be 88 chars
-    'authToken' => 'nCcpo8Bg8fLVVFtRs88GuA==', // base 64 encoded, should be 24 chars
-]);
+//$subscription = Subscription::create([
+//    'endpoint' => 'https://fcm.googleapis.com/fcm/send/d0TH_3q920U:APA91bEXaWgUZx7VV7SZKM4XUua_sTp9FrY6uhhPUgOoCiQ_zfyCP2IlhGcV0cODj06e5i0BP599Yb9m7gkxEYJCh9TPvqd5Wbv1Ad1qjdvwf4bf96FwgwRY5cb9s5eLjwnLERItMRs0', // Firefox 43+,
+//    'publicKey' => 'BMBsQg3PP56yG6eqIAIf5rfrwKxGsRbwvy0fG1cUTyhvHWl+4QMI260FO72z4MkH8m+iV9oyK+O8x+bIWSGowl0=', // base 64 encoded, should be 88 chars
+//    'authToken' => 'nCcpo8Bg8fLVVFtRs88GuA==', // base 64 encoded, should be 24 chars
+//]);
 
-var_dump($subscription);
+//var_dump($subscription);
 
 $report = $webPush->sendOneNotification(
     $subscription,

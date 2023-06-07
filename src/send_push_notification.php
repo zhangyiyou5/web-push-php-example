@@ -26,7 +26,7 @@ $subscription = Subscription::create([
     'authToken' => 'nCcpo8Bg8fLVVFtRs88GuA==', // base 64 encoded, should be 24 chars
 ]);
 
-//var_dump($subscription);
+var_dump($subscription);
 
 $report = $webPush->sendOneNotification(
     $subscription,

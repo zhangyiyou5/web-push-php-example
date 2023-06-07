@@ -239,6 +239,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const contentEncoding = (PushManager.supportedContentEncodings || ['aesgcm'])[0];
         const jsonSubscription = subscription.toJSON();
+        console.log(jsonSubscription);
+        console.log(111111111111);
         fetch('send_push_notification.php', {
           method: 'POST',
           body: JSON.stringify(Object.assign(jsonSubscription, { contentEncoding })),

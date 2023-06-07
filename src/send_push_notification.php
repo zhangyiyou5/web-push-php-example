@@ -33,15 +33,17 @@ try {
         $subscription,
         '{"title":"Hello World!","body":"body","icon":"icon"}'
     );
+    // handle eventual errors here, and remove the subscription from your server if it is expired
+    $endpoint = $report->getRequest()->getUri()->__toString();
+
+    if ($report->isSuccess()) {
+        echo "[v] Message sent successfully for subscription {$endpoint}.";
+    } else {
+        echo "[x] Message failed to sent for subscription {$endpoint}: {$report->getReason()}";
+    }
+
 } catch (ErrorException $e) {
     echo $e->getMessage();
 }
 
-// handle eventual errors here, and remove the subscription from your server if it is expired
-$endpoint = $report->getRequest()->getUri()->__toString();
 
-if ($report->isSuccess()) {
-    echo "[v] Message sent successfully for subscription {$endpoint}.";
-} else {
-    echo "[x] Message failed to sent for subscription {$endpoint}: {$report->getReason()}";
-}

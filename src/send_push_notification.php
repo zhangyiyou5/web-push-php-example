@@ -28,10 +28,14 @@ $webPush = new WebPush($auth);
 
 //var_dump($subscription);
 
-$report = $webPush->sendOneNotification(
-    $subscription,
-    '{"title":"Hello World!","body":"body","icon":"icon"}'
-);
+try {
+    $report = $webPush->sendOneNotification(
+        $subscription,
+        '{"title":"Hello World!","body":"body","icon":"icon"}'
+    );
+} catch (ErrorException $e) {
+    echo $e->getMessage();
+}
 
 // handle eventual errors here, and remove the subscription from your server if it is expired
 $endpoint = $report->getRequest()->getUri()->__toString();
